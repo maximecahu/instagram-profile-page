@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap');
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(51, 51, 51);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.scrollable {
+    height: 48rem;
+    overflow: auto;
+}
+
+.scrollable::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.container {
+    position: relative;
+    width: 28rem;
+    height: calc(28rem*2.111111);
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 17px;
+    padding-inline: 18px;
+}
+
+.top-left {
+    display: flex;
+    align-items: center;
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.arrow-down {
+    margin-inline: 1px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.arrow-down img {
+    max-width: 60%;
+    max-height: auto;
+    display: block;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.notif-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50px;
+    background-color: red;
+}
+
+.red-dot {
+    margin-left: 8px;
+    background-color: red;
+}
+
+.icon-button {
+    margin-inline: 1px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.icon-button img {
+    max-width: 150%;
+    max-height: auto;
+    display: block;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.top-right {
+    width: 5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+    margin-top: 10px;
+    padding-inline: 18px;
+}
+
+.profile-picture {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50px;
+    margin-right: 20px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture img {
+    max-width: 150%;
+    max-height: auto;
+    display: block;
+    margin-left: 8px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: solid 1px rgb(207, 207, 207);
+}
+
+.bio {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-inline: 18px;
+}
+
+.header-elem {
+    text-align: center;
+    font-weight: 400;
+}
+
+.account-type {
+    font-weight: 100;
+    font-size: 1.1em;
+    color: gray;
+}
+
+.professional-dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(218, 218, 218);
+    border-radius: 8px;
+    padding: 8px;
+    padding-right: 25px;
+    padding-left: 12px;
+    height: 2.3rem;
+    cursor: pointer;
+    margin-inline: 10px;
+}
+
+.dashboard-left {
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.dashboard-description {
+    font-size: 0.85em;
+    color: gray;
+}
+
+.blue-dot {
+    background-color: blue;
+}
+
+.middle-buttons-container {
+    display: flex;
+    height: 2.5rem;
+    margin-inline: 10px;
+    margin-bottom: 20px;
+}
+
+.middle-buttons-container button {
+    flex: 1;
+    margin-top: 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(218, 218, 218);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.middle-button-left {
+    margin-right: 3px;
+}
+
+.middle-button-right {
+    margin-left: 3px;
+}
+
+.highlights-bar {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    height: 7rem;
+    gap: 2rem;
+    margin-inline: 18px;
+}
+
+.highlights-bar .highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.highlights-bar div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50px;
+    padding: 0.2rem;
+    border: solid 1px gray;
+    cursor: pointer;
+}
+
+.highlight-new {
+    font-size: 2.5em;
+    font-weight: 100;
+}
+
+.highlight p {
+    bottom: 27.5rem;
+    text-align: center;
+    font-size: 0.6em;
+    font-weight: 400;
+    width: 4rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content-chooser {
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.posts-chooser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.tagged {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+
+
+.content-chooser button img {
+    max-width: 150%;
+    max-height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.line {
+    transform: translateX(0);
+    height: 1px;
+    width: 14rem;
+    background-color: black;
+}
+
+.line-right {
+    transform: translateX(14rem);
+    height: 1px;
+    width: 14rem;
+    background-color: black;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, calc(28rem/3));
+    grid-template-rows: repeat(10, calc(28rem/3));
+    grid-gap: 0;
+
+}
+
+.cell {
+    background-color: #eee;
+    border: 1px solid #ffffff;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+}
+
+.lower-button-bar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 5rem;
+}
+
+.footer button img {
+    max-width: 150%;
+    max-height: auto;
+    display: block;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.footer .profile-button img {
+    border-radius: 50px;
+    border: solid black 2px;
+}
+
+.footer button,
+.lower-button-bar button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+footer .lower-button-bar button img {
+    max-width: 100%;
+    max-height: auto;
+    display: block;
+    margin-left: 8px;
+    cursor: pointer;
+    color: gray;
+}
+
+.apps-buttons {
+    transform: rotate(90deg);
+    margin-bottom: 5px;
+}
+
+.back-button {
+    transform: rotate(90deg);
+    margin-bottom: 5px;
+}

@@ -284,11 +284,19 @@ h1 {
     cursor: pointer;
 }
 
-.line {
-    transform: translateX(0);
+.line-orig {
+    transform: translateX(0rem);
     height: 1px;
     width: 14rem;
     background-color: black;
+}
+
+.line {
+    transform: translateX(0rem);
+    height: 1px;
+    width: 14rem;
+    background-color: black;
+    animation: left 0.3s ease-in;
 }
 
 .line-right {
@@ -296,6 +304,27 @@ h1 {
     height: 1px;
     width: 14rem;
     background-color: black;
+    animation: right 0.3s ease-in;
+}
+
+@keyframes right {
+    0% {
+        transform: translateX(0rem);
+    }
+
+    100% {
+        transform: translateX(14rem);
+    }
+}
+
+@keyframes left {
+    0% {
+        transform: translateX(14rem);
+    }
+
+    100% {
+        transform: translateX(0rem);
+    }
 }
 
 
@@ -376,4 +405,169 @@ footer .lower-button-bar button img {
 .back-button {
     transform: rotate(90deg);
     margin-bottom: 5px;
+}
+
+.pop-up-active {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.377);
+    width: 28rem;
+    height: calc(28rem*2.111111);
+    border-radius: 25px;
+    left: 0;
+    overflow: hidden;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.pop-up-active.animate {
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+.pop-up-deactive {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    width: 28rem;
+    height: calc(28rem*2.111111);
+    border-radius: 25px;
+    left: -80rem;
+    overflow: hidden;
+    transition: background-color 0.2s ease-in-out;
+    transition: left .3s step-end;
+}
+
+.pop-up-deactive.animate {
+    background-color: rgba(255, 255, 255, 0);
+    left: -80rem;
+}
+
+.pop-up {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.377);
+    width: 28rem;
+    height: calc(28rem*2.111111);
+    border-radius: 25px;
+    left: -80rem;
+    overflow: hidden;
+}
+
+.first-account .profile-picture,
+.second-account .profile-picture {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 15px;
+}
+
+.first-account,
+.second-account,
+.add-acount {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 28rem;
+    height: 7rem;
+}
+
+.first-account {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.add-acount {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.maximecahu,
+.maxiphoto,
+.add-acc {
+    flex: 3;
+    font-size: smaller;
+    margin-left: 5px;
+}
+
+.add-acc {
+    margin-left: 15px;
+}
+
+.big-blue-dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    border: solid rgb(0, 81, 255) 10px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.big-blank-dot {
+    width: 28px;
+    height: 28px;
+    background-color: rgb(255, 255, 255);
+    border: solid gray 1px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.add-acount div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50px;
+    padding: 0.2rem;
+    border: solid 1px gray;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.pop-up-lower-active {
+    position: absolute;
+    left: 0;
+    bottom: 0rem;
+    animation: popUp .2s ease-in;
+}
+
+@keyframes popUp {
+    0% {
+        bottom: -22rem;
+    }
+
+    100% {
+        bottom: 0rem;
+    }
+}
+
+.pop-up-lower-deactive {
+    position: absolute;
+    left: 0;
+    bottom: -22rem;
+    animation: popUpDeac .2s ease-in;
+}
+
+@keyframes popUpDeac {
+    0% {
+        bottom: 0rem;
+    }
+
+    100% {
+        bottom: -22rem;
+    }
+}
+
+.pop-up-lower {
+    position: absolute;
+    left: 0;
+    bottom: -22rem;
 }
